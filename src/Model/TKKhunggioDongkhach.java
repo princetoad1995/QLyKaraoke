@@ -1,11 +1,11 @@
 package Model;
 
-public class HoadonTong {
+public class TKKhunggioDongkhach {
     private int gio;
     private int songuoi;
     private int tongtien;
 
-    public HoadonTong() {
+    public TKKhunggioDongkhach() {
     }
 
     public int getGio() {

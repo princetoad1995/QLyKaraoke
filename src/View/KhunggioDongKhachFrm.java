@@ -5,7 +5,7 @@ import ControllerImpl.ThongkeControllerImpl;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 import Model.ChitietHoadonTong;
-import Model.HoadonTong;
+import Model.TKKhunggioDongkhach;
 import Model.Hoadon;
 import Model.MathangDung;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class KhunggioDongKhachFrm extends javax.swing.JFrame {
     private List<ChitietHoadonTong> listChitietHDT;
     private List<Hoadon> listHD;
     private List<MathangDung> listMHD;
-    private List<HoadonTong> listHoadonTong;
+    private List<TKKhunggioDongkhach> listHoadonTong;
 
     public KhunggioDongKhachFrm() {
         initComponents();
@@ -107,7 +107,7 @@ public class KhunggioDongKhachFrm extends javax.swing.JFrame {
                 }
 
             }
-            HoadonTong hdTong = new HoadonTong();
+            TKKhunggioDongkhach hdTong = new TKKhunggioDongkhach();
             hdTong.setGio(i);
             hdTong.setSonguoi(songuoi);
             hdTong.setTongtien(tongtien);
@@ -115,9 +115,9 @@ public class KhunggioDongKhachFrm extends javax.swing.JFrame {
             
         }
 
-        Collections.sort(listHoadonTong, new Comparator<HoadonTong>() {
+        Collections.sort(listHoadonTong, new Comparator<TKKhunggioDongkhach>() {
             @Override
-            public int compare(HoadonTong o1, HoadonTong o2) {
+            public int compare(TKKhunggioDongkhach o1, TKKhunggioDongkhach o2) {
                 if(o1.getSonguoi() < o2.getSonguoi())
                     return 1;
                 else if(o1.getSonguoi() > o2.getSonguoi())
@@ -133,7 +133,7 @@ public class KhunggioDongKhachFrm extends javax.swing.JFrame {
             }
         });
         int stt = 0;
-        for(HoadonTong hdTong : listHoadonTong){
+        for(TKKhunggioDongkhach hdTong : listHoadonTong){
             defaultTableModel.addRow(new Object[]{
                 ++stt,
                 hdTong.getGio() + "h -> " + (hdTong.getGio()+1) + "h",

@@ -2,6 +2,7 @@ package Model;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.util.List;
 
 public class Hoadon {
 
@@ -12,6 +13,8 @@ public class Hoadon {
     private int thanhTien;
     private String tenKhachhang;
     private Date ngay;
+    private List<MathangDung> listMathangDung;
+    private boolean trangthai;
 
     public Hoadon() {
     }
@@ -70,6 +73,22 @@ public class Hoadon {
 
     public void setThanhTien(int thanhTien) {
         this.thanhTien = thanhTien;
+    }
+
+    public List<MathangDung> getListMathangDung() {
+        return listMathangDung;
+    }
+
+    public void setListMathangDung(List<MathangDung> listMathangDung) {
+        this.listMathangDung = listMathangDung;
+    }
+
+    public boolean isTrangthai() {
+        return trangthai;
+    }
+
+    public void setTrangthai(boolean trangthai) {
+        this.trangthai = trangthai;
     }
 
     
